@@ -1,0 +1,28 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using modul21.Models.Entitys
+@model Person
+<html>
+    <head>
+    <title>Редактирование</title>
+    </head>
+    <body>
+    <div>
+        <form asp-action="Edit" asp-controller="Person" asp-route-id="@Model.Id">
+            <label>Имя</label><br />
+            <input type="text" asp-for="FirstName" value="@Model.FirstName"/><br />
+            <label>Фамилия</label><br />
+            <input type="text" asp-for="LastName" value="@Model.LastName"/><br />
+            <label>Отчество</label><br />
+            <input type="text" asp-for="MiddleName" value="@Model.MiddleName"/><br />
+            <label>Номер телефона</label><br />
+            <input type="tel" asp-for="PhoneNumber" value="@Model.PhoneNumber"/><br />
+            <label>Адрес</label><br />
+            <input type="text" asp-for="Address" value="@Model.Address"/><br />
+            <label>Заметка</label><br />
+            <input type="text" asp-for="Description" value="@Model.Description"/><br />
+            <p><input type="submit" value="Отправить"/></p>
+        </form>
+    </div>
+    <hr />
+    </body>
+</html>
